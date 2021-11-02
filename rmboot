@@ -61,6 +61,10 @@ export BTFS_PATH=/btfs/btfs$i/.btfs;
 ./btfs swarm filters rm "/ip4/38.107.0.0/ipcidr/16";
 ./btfs swarm filters rm "/ip4/216.250.255.0/ipcidr/24";
 ./btfs swarm filters rm "/ip4/216.250.254.0/ipcidr/24";
+./btfs swarm filters rm "/ip4/104.37.172.0/ipcidr/24";
+./btfs swarm filters rm "/ip4/147.124.217.0/ipcidr/24";
+./btfs swarm filters rm "/ip4/147.124.222.0/ipcidr/24";
+./btfs swarm filters rm "/ip4/147.124.221.0/ipcidr/24";
 systemctl stop btfs$i; 
 systemctl start btfs$i; 
 sleep 1s
