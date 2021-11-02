@@ -1,4 +1,4 @@
-for ((i=1;i<=400;i++)); 
+for ((i=1;i<=300;i++)); 
 do 
 echo $i; 
 
@@ -67,5 +67,5 @@ export BTFS_PATH=/btfs/btfs$i/.btfs;
 ./btfs swarm filters rm "/ip4/147.124.221.0/ipcidr/24";
 systemctl stop btfs$i; 
 systemctl start btfs$i; 
-sleep 1s
+sleep 20s
 done
