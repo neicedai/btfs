@@ -1,0 +1,19 @@
+for ((i=1;i<=400;i++)); 
+do 
+echo $i; 
+
+#systemctl start btfs$i;
+#sleep 15s
+export BTFS_PATH=/btfs/btfs$i/.btfs; 
+./btfs swarm filters add "/ip6/::1/ipcidr/16"; 
+./btfs swarm filters add "/ip4/192.168.0.0/ipcidr/16"; 
+./btfs swarm filters add "/ip4/10.0.0.0/ipcidr/8"; 
+./btfs swarm filters add "/ip4/172.16.0.0/ipcidr/12"; 
+./btfs swarm filters add "/ip4/100.64.0.0/ipcidr/10"; 
+./btfs swarm filters add "/ip4/169.254.0.0/ipcidr/16"; 
+./btfs swarm filters add "/ip4/127.0.0.0/ipcidr/16"; 
+./btfs swarm filters add "/ip4/216.173.113.0/ipcidr/24";
+systemctl stop btfs$i; 
+systemctl start btfs$i; 
+sleep 15s
+done
